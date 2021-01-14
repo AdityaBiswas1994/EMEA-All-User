@@ -99,7 +99,7 @@ public class Country
 		{
 			int offset = 0;
 			int limit = 1000;
-			String base_url = URL+"/query?q="+URLEncoder.encode("select name__v,regions__c from country__v where regions__c = 'emea__c' LIMIT "+limit+" OFFSET "+offset,"UTF-8");
+			String base_url = URL+"/query?q="+URLEncoder.encode("Your SQL query for country LIMIT "+limit+" OFFSET "+offset,"UTF-8");
 			JSONObject country = new JSONObject();
 			country.put("data", new JSONArray());
 			JSONObject obj = Session.getRequest(base_url, session_id);
