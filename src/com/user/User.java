@@ -16,7 +16,7 @@ public class User {
 		List<JSONObject> users = new ArrayList<JSONObject>();		
 		while (true) 
 		{
-			String base_url = URL+"/query?q="+URLEncoder.encode("select first_name__sys,last_login__sys,last_name__sys,region__c,status__v,business_location__cr.name__v,username__sys,business_group__c,wwid__c from user__sys LIMIT "+limit+" OFFSET "+offset,"UTF-8");
+			String base_url = URL+"/query?q="+URLEncoder.encode("Your SQL query"+limit+" OFFSET "+offset,"UTF-8");
 			JSONObject user = new JSONObject();
 			user.put("data", new JSONArray());
 			JSONObject obj = Session.getRequest(base_url, session_id);
